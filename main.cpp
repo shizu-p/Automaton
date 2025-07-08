@@ -19,5 +19,9 @@ int main() {
     automaton.set_to_vec(to);
     string inp;
     cin >> inp;
-    cout << automaton.run(inp) << endl;
+    cout << "受理されたか : " << automaton.run(inp) << endl;
+    auto hist = automaton.get_histry();
+    cout << "遷移 : ";
+    for(int v : hist)cout << v << " ";
+    cout << endl;
 }
